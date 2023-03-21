@@ -9,10 +9,15 @@ function contar() {
         window.alert('[ERRO] Faltam dados!')
         res.innerHTML = 'Impossivel contar!'
     } else {
-        res.innerHTML = 'Contando: '
+        res.innerHTML = 'Contando: <br>'
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
+
+        if(p <= 0) {
+            window.alert('Passo inválido! Considerando PASSO 1')
+            p = 1
+        }
 
         if (i < f)  {// se o valor do inicio for menor que o valor do final, aí esse ocdigo faz sentido
             // Contagem crescente
