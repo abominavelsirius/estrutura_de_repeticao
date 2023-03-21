@@ -7,14 +7,24 @@ function contar() {
 
     if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {  // se tiver  vazio
         window.alert('[ERRO] Faltam dados!')
+        res.innerHTML = 'Impossivel contar!'
     } else {
         res.innerHTML = 'Contando: '
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
 
-        for(let c = i; c <= f; c += p) {
-            res.innerHTML += `${c}`
+        if (i < f)  {// se o valor do inicio for menor que o valor do final, aí esse ocdigo faz sentido
+            // Contagem crescente
+            for(let c = i; c <= f; c += p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }
+        } else {
+            // Contagem regressiva
+            for(let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }
         }
+        res.innerHTML += `\u{1F3C1}`
     }
 }
