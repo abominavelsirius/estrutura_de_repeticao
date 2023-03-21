@@ -5,40 +5,27 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Verificador de idade</title>
+        <title>Super Contador</title>
     </head>
 
     <body>
 
         <header>
-            <h1>Verificar de idade</h1>
+            <h1>Vamos contar!</h1>
         </header>
 
         <main>
             <section>
 
-                <div>
-                    <p>Ano de nascimento:
-                        <input type="number" name="txtano" id="txtano" min="0">
-                    </p>
-
-                    <p>Sexo:
-                        <input type="radio" name="radsex" id="masc">
-                        <label for="masc">Masculino</label>
-                        <input type="radio" name="radsex" id="fem">
-                        <label for="fem">Feminino</label>
-                    </p>
-
-                    <p>
-                        <input type="button" value="Verificar" onclick="verificar()">
-                    </p>
-
-
+                <div id="dados">
+                    <p>Início: <input type="number" name="inicio" id="txti"></p>
+                    <p>Fim: <input type="number" name="fim" id="txtf"></p>
+                    <P>Passo: <input type="number" name="passo" id="txtp"> </P>
+                    <p><input type="button" value="contar" onclick="contar()"></p>
                 </div>
 
-                <div id="res">
-                    Preencha os dados acima para ver os resultados!
-
+                <div id="resultado">
+                   Preparando a contagem...
                 </div>
 
             </section>
